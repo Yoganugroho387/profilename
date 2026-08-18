@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yoganugroho - Profil & Links</title>
+    <meta name="description" content="Profil resmi Yoganugroho (@yogakarsadipa) - Founder Yobase, Yobasepay, dan Yohost.">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Yoganugroho">
+    <meta property="og:description" content="Digital Tech Enthusiast & Founder Yobase, Yobasepay & Yohost  Follow channel WhatsApp di bawah ini untuk update & layanan terbaru!">
+    <meta property="og:image" content="https://cdn.yogaasz.id//uploads/yo_55f78dff751aa8c2.jpg">
+    <meta property="og:type" content="website">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        :root {
+            /* Palet Warna Putih & Biru */
+            --bg-main: #edf4ff;
+            --bg-card: #ffffff;
+            --bg-glass: rgba(255, 255, 255, 0.9);
+            --primary-blue: #2563eb;
+            --primary-dark-blue: #1e40af;
+            --primary-light-blue: #60a5fa;
+            --ice-blue: #f0f7ff;
+            --accent-glow: rgba(37, 99, 235, 0.12);
+            --text-dark: #0f172a;
+            --text-muted: #64748b;
+            --border-light: #e2e8f0;
+            --border-blue: #c7d2fe;
+            --shadow-sm: 0 2px 5px rgba(37, 99, 235, 0.05);
+            --shadow-md: 0 8px 20px -4px rgba(37, 99, 235, 0.12);
+            --shadow-lg: 0 16px 30px -8px rgba(37, 99, 235, 0.18);
+            --radius-main: 20px;
+            --radius-button: 14px;
+        }
+
+        /* Mode Gelap (Dark Mode) */
+        [data-theme="dark"] {
+            --bg-main: #0b1329;
+            --bg-card: #111c3a;
+            --bg-glass: rgba(17, 28, 58, 0.9);
+            --primary-blue: #3b82f6;
+            --primary-dark-blue: #60a5fa;
+            --primary-light-blue: #93c5fd;
+            --ice-blue: #1e293b;
+            --accent-glow: rgba(59, 130, 246, 0.25);
+            --text-dark: #f8fafc;
+            --text-muted: #94a3b8;
+            --border-light: #1e293b;
+            --border-blue: #2563eb;
+            --shadow-md: 0 8px 20px -4px rgba(0, 0, 0, 0.5);
+            --shadow-lg: 0 16px 30px -8px rgba(0, 0, 0, 0.7);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        body {
+            background-color: var(--bg-main);
+            background-image: 
+                radial-gradient(circle at 10% 20%, rgba(37, 99, 235, 0.06) 0%, transparent 40%),
+                radial-gradient(circle at 90% 80%, rgba(96, 165, 250, 0.08) 0%, transparent 40%);
+            background-attachment: fixed;
+            color: var(--text-dark);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 16px 12px 30px;
+            transition: background-color 0.4s ease, color 0.4s ease;
+            font-size: 13px;
+        }
+
+        /* Kontainer Utama */
+        .profile-container {
+            width: 100%;
+            max-width: 440px;
+            background: var(--bg-card);
+            border-radius: var(--radius-main);
+            box-shadow: var(--shadow-lg);
+            border: 1px solid var(--border-blue);
+            overflow: hidden;
+            position: relative;
+            animation: fadeInScale 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        @keyframes fadeInScale {
+            from {
+                opacity: 0;
+                transform: translateY(15px) scale(0.98);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+
+        /* Top Action Bar */
+        .top-bar {
+            position: absolute;
+            top: 12px;
+            left: 12px;
+            right: 12px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 10;
+        }
+
+        .top-actions-right {
+            display: flex;
+            gap: 8px;
+        }
+
+        .icon-btn {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.88);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.7);
+            color: #1e40af;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+            transition: all 0.25s ease;
+            font-size: 13px;
+        }
+
+        [data-theme="dark"] .icon-btn {
+            background: rgba(15, 23, 42, 0.8);
+            border-color: rgba(255, 255, 255, 0.15);
+            color: #60a5fa;
+        }
+
+        .icon-btn:hover {
+            transform: translateY(-2px) scale(1.05);
+            background: #ffffff;
+            color: var(--primary-blue);
+        }
+
+        .icon-btn.playing {
+            background: var(--primary-blue);
+            color: #ffffff;
+            box-shadow: 0 0 12px rgba(37, 99, 235, 0.5);
+            animation: pulseGlow 2s infinite;
+        }
+
+        @keyframes pulseGlow {
+            0%, 100% { box-shadow: 0 0 10px rgba(37, 99, 235, 0.4); }
+            50% { box-shadow: 0 0 18px rgba(37, 99, 235, 0.8); }
+        }
+
+        /* Foto Sampul Belakang Full */
+        .cover-header-container {
+            width: 100%;
+            height: 220px;
+            position: relative;
+            background-color: #1e293b;
+            overflow: hidden;
+        }
+
+        .cover-bg-blur {
+            position: absolute;
+            inset: -10px;
+            background-image: url('https://cdn.yogaasz.id//uploads/yo_53809fd643876afa.jpg');
+            background-size: cover;
+            background-position: center;
+            filter: blur(14px) brightness(0.7);
+            transform: scale(1.1);
+        }
+
+        .cover-img-full {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            z-index: 2;
+            transition: transform 0.6s ease;
+        }
+
+        .cover-header-container:hover .cover-img-full {
+            transform: scale(1.03);
+        }
+
+        .cover-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to bottom, rgba(0,0,0,0.2) 0%, rgba(37, 99, 235, 0.25) 100%);
+            z-index: 3;
+        }
+
+        /* Detail Profil */
+        .profile-body {
+            padding: 0 18px 22px;
+            position: relative;
+            text-align: center;
+        }
+
+        /* Avatar Foto Profil */
+        .avatar-wrapper {
+            position: relative;
+            width: 100px;
+            height: 100px;
+            margin: -50px auto 12px;
+            border-radius: 50%;
+            padding: 3px;
+            background: #ffffff;
+            box-shadow: 0 6px 18px rgba(37, 99, 235, 0.25);
+            z-index: 5;
+        }
+
+        [data-theme="dark"] .avatar-wrapper {
+            background: var(--bg-card);
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.5);
+        }
+
+        .avatar-img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+            display: block;
+            border: 2px solid var(--primary-light-blue);
+        }
+
+        .verified-badge {
+            position: absolute;
+            bottom: 2px;
+            right: 2px;
+            background: var(--primary-blue);
+            color: #ffffff;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2.5px solid #ffffff;
+            font-size: 11px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+
+        [data-theme="dark"] .verified-badge {
+            border-color: var(--bg-card);
+        }
+
+        /* Nama & Username */
+        .profile-name {
+            font-size: 18px;
+            font-weight: 800;
+            color: var(--text-dark);
+            letter-spacing: -0.3px;
+            margin-bottom: 3px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 4px;
+        }
+
+        .profile-handle {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--primary-blue);
+            text-decoration: none;
+            background: var(--ice-blue);
+            padding: 3px 12px;
+            border-radius: 16px;
+            border: 1px solid var(--border-blue);
+            margin-bottom: 12px;
+            transition: all 0.2s ease;
+        }
+
+        .profile-handle:hover {
+            background: var(--primary-blue);
+            color: #ffffff;
+            transform: translateY(-1px);
+        }
+
+        /* Bio */
+        .profile-bio {
+            font-size: 12.5px;
+            line-height: 1.5;
+            color: var(--text-muted);
+            margin-bottom: 18px;
+            padding: 0 8px;
+        }
+
+        /* Bar Statistik Ringkas */
+        .stats-bar {
+            display: flex;
+            justify-content: space-around;
+            background: var(--ice-blue);
+            border: 1px solid var(--border-blue);
+            border-radius: 14px;
+            padding: 9px 12px;
+            margin-bottom: 18px;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-value {
+            font-size: 13px;
+            font-weight: 700;
+            color: var(--primary-dark-blue);
+        }
+
+        [data-theme="dark"] .stat-value {
+            color: var(--primary-light-blue);
+        }
+
+        .stat-label {
+            font-size: 10px;
+            font-weight: 600;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.4px;
+        }
+
+        /* Daftar Link */
+        .links-container {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .link-card {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 12px 15px;
+            background: var(--bg-card);
+            border: 1.5px solid var(--border-blue);
+            border-radius: var(--radius-button);
+            text-decoration: none;
+            color: var(--text-dark);
+            box-shadow: var(--shadow-sm);
+            transition: all 0.25s cubic-bezier(0.25, 0.8, 0.25, 1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .link-card::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 4px;
+            background: var(--primary-blue);
+            opacity: 0;
+            transition: opacity 0.25s ease;
+        }
+
+        .link-card.blue-featured {
+            background: linear-gradient(135deg, #f0f7ff 0%, #e0e7ff 100%);
+            border-color: #93c5fd;
+            box-shadow: 0 3px 10px rgba(37, 99, 235, 0.12);
+        }
+
+        [data-theme="dark"] .link-card.blue-featured {
+            background: linear-gradient(135deg, #1e293b 0%, #1e40af 100%);
+            border-color: #3b82f6;
+        }
+
+        .link-card:hover {
+            transform: translateY(-2px) scale(1.005);
+            box-shadow: var(--shadow-md);
+            border-color: var(--primary-blue);
+        }
+
+        .link-card:hover::before {
+            opacity: 1;
+        }
+
+        .link-card:active {
+            transform: translateY(0) scale(0.99);
+        }
+
+        /* Konten Kiri Kartu Link */
+        .link-left {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-align: left;
+        }
+
+        .icon-box {
+            width: 38px;
+            height: 38px;
+            border-radius: 12px;
+            background: #ffffff;
+            border: 1px solid var(--border-blue);
+            color: var(--primary-blue);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            flex-shrink: 0;
+            box-shadow: 0 2px 6px rgba(37, 99, 235, 0.08);
+            transition: all 0.25s ease;
+        }
+
+        [data-theme="dark"] .icon-box {
+            background: #0f172a;
+            border-color: #2563eb;
+            color: #60a5fa;
+        }
+
+        .link-card:hover .icon-box {
+            background: var(--primary-blue);
+            color: #ffffff;
+            transform: rotate(-4deg) scale(1.08);
+        }
+
+        .link-info {
+            display: flex;
+            flex-direction: column;
+            gap: 1px;
+        }
+
+        .link-title {
+            font-size: 13.5px;
+            font-weight: 700;
+            color: var(--text-dark);
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .link-desc {
+            font-size: 11px;
+            color: var(--text-muted);
+            line-height: 1.25;
+        }
+
+        /* Badge Pill */
+        .link-badge {
+            font-size: 9px;
+            font-weight: 700;
+            padding: 2px 6px;
+            border-radius: 8px;
+            text-transform: uppercase;
+            letter-spacing: 0.4px;
+            background: var(--primary-blue);
+            color: #ffffff;
+        }
+
+        .link-card.blue-featured .link-badge {
+            background: #1d4ed8;
+        }
+
+        /* Icon Panah */
+        .link-arrow {
+            color: var(--primary-light-blue);
+            font-size: 12px;
+            transition: transform 0.25s ease, color 0.25s ease;
+        }
+
+        .link-card:hover .link-arrow {
+            transform: translateX(3px);
+            color: var(--primary-blue);
+        }
+
+        /* Footer */
+        .footer {
+            margin-top: 22px;
+            padding-top: 16px;
+            border-top: 1px solid var(--border-light);
+            text-align: center;
+            font-size: 11px;
+            color: var(--text-muted);
+        }
+
+        .footer span {
+            color: var(--primary-blue);
+            font-weight: 700;
+        }
+
+        /* Notifikasi Toast */
+        .toast {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%) translateY(80px);
+            background: var(--primary-dark-blue);
+            color: #ffffff;
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-size: 12px;
+            font-weight: 600;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            opacity: 0;
+            transition: all 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            z-index: 100;
+        }
+
+        .toast.show {
+            transform: translateX(-50%) translateY(0);
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Musik Latar (music.mp3) -->
+    <audio id="bgMusic" src="music.mp3" autoplay loop preload="auto"></audio>
+
+    <div class="profile-container">
+        <!-- Top Actions Bar -->
+        <div class="top-bar">
+            <button class="icon-btn" id="themeToggle" title="Ganti Mode Warna">
+                <i class="fa-solid fa-moon"></i>
+            </button>
+            <div class="top-actions-right">
+                <button class="icon-btn" id="musicToggle" title="Putar Musik">
+                    <i class="fa-solid fa-music"></i>
+                </button>
+                <button class="icon-btn" id="shareBtn" title="Bagikan Profil">
+                    <i class="fa-solid fa-share-nodes"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Cover Header Image Full -->
+        <div class="cover-header-container">
+            <div class="cover-bg-blur"></div>
+            <img src="https://cdn.yogaasz.id//uploads/yo_53809fd643876afa.jpg" alt="Header Cover Yoganugroho" class="cover-img-full">
+            <div class="cover-overlay"></div>
+        </div>
+
+        <!-- Body Profil -->
+        <div class="profile-body">
+            <!-- Avatar Foto Profil -->
+            <div class="avatar-wrapper">
+                <img src="https://cdn.yogaasz.id//uploads/yo_55f78dff751aa8c2.jpg" alt="Yoganugroho" class="avatar-img">
+                <div class="verified-badge" title="Profil Terverifikasi">
+                    <i class="fa-solid fa-check"></i>
+                </div>
+            </div>
+
+            <!-- Nama & Username -->
+            <h1 class="profile-name">
+                Yoganugroho
+            </h1>
+
+            <a href="https://www.instagram.com/yogakarsadipa" target="_blank" class="profile-handle">
+                <i class="fa-brands fa-instagram"></i>
+                @yogakarsadipa
+            </a>
+
+            <!-- Bio -->
+            <p class="profile-bio">
+                Digital Tech Enthusiast & Founder Yobase, Yobasepay & Yohost  Follow channel WhatsApp di bawah ini untuk update & layanan terbaru!
+            </p>
+
+            <!-- Bar Informasi Ringkas -->
+            <div class="stats-bar">
+                <div class="stat-item">
+                    <div class="stat-value">3+</div>
+                    <div class="stat-label">Channel</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value">Yobase</div>
+                    <div class="stat-label">Ekosistem</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value">24/7</div>
+                    <div class="stat-label">Aktif</div>
+                </div>
+            </div>
+
+            <!-- Daftar Link -->
+            <div class="links-container">
+                <a href="https://whatsapp.com/channel/0029Vb6yXSg1HspqIPxgyE0m" 
+                   target="_blank" 
+                   rel="noopener noreferrer" 
+                   class="link-card blue-featured">
+                    <div class="link-left">
+                        <div class="icon-box">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </div>
+                        <div class="link-info">
+                            <div class="link-title">
+                                Channel Yobasepay (Produk)
+                                <span class="link-badge">Produk</span>
+                            </div>
+                            <div class="link-desc">Channel WhatsApp Resmi Produk & Layanan Yobasepay</div>
+                        </div>
+                    </div>
+                    <div class="link-arrow">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </div>
+                </a>
+                <a href="https://whatsapp.com/channel/0029VbCQvkqFi8xkbmcbti2s" 
+                   target="_blank" 
+                   rel="noopener noreferrer" 
+                   class="link-card blue-standard">
+                    <div class="link-left">
+                        <div class="icon-box">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </div>
+                        <div class="link-info">
+                            <div class="link-title">
+                                Channel Yobase
+                                <span class="link-badge">Official Channel</span>
+                            </div>
+                            <div class="link-desc">Channel WhatsApp Resmi Informasi & Update Yobase</div>
+                        </div>
+                    </div>
+                    <div class="link-arrow">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </div>
+                </a>
+                <a href="https://whatsapp.com/channel/0029VbBnpfK3mFY71xVzrv3s" 
+                   target="_blank" 
+                   rel="noopener noreferrer" 
+                   class="link-card blue-standard">
+                    <div class="link-left">
+                        <div class="icon-box">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </div>
+                        <div class="link-info">
+                            <div class="link-title">
+                                Channel Yohost
+                                <span class="link-badge">Yohost</span>
+                            </div>
+                            <div class="link-desc">Channel WhatsApp Hosting, Server & Cloud Infrastructure</div>
+                        </div>
+                    </div>
+                    <div class="link-arrow">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </div>
+                </a>
+                <a href="https://www.instagram.com/yogakarsadipa" 
+                   target="_blank" 
+                   rel="noopener noreferrer" 
+                   class="link-card blue-insta">
+                    <div class="link-left">
+                        <div class="icon-box">
+                            <i class="fa-brands fa-instagram"></i>
+                        </div>
+                        <div class="link-info">
+                            <div class="link-title">
+                                Instagram @yogakarsadipa
+                                <span class="link-badge">Instagram</span>
+                            </div>
+                            <div class="link-desc">Ikuti postingan & foto terbaru di Instagram</div>
+                        </div>
+                    </div>
+                    <div class="link-arrow">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Footer -->
+            <div class="footer">
+                &copy; 2026 <span>Yoganugroho</span>. Hak Cipta Dilindungi.
+            </div>
+        </div>
+    </div>
+
+    <!-- Notifikasi Toast -->
+    <div class="toast" id="toast">
+        <i class="fa-solid fa-circle-check"></i>
+        <span id="toastMsg">Link berhasil disalin!</span>
+    </div>
+
+    <script>
+        // Pengubah Mode Gelap / Terang
+        const themeToggle = document.getElementById('themeToggle');
+        const themeIcon = themeToggle.querySelector('i');
+        
+        const savedTheme = localStorage.getItem('yoganugroho_theme') || 'light';
+        document.documentElement.setAttribute('data-theme', savedTheme);
+        updateThemeIcon(savedTheme);
+
+        themeToggle.addEventListener('click', () => {
+            const currentTheme = document.documentElement.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            
+            document.documentElement.setAttribute('data-theme', newTheme);
+            localStorage.setItem('yoganugroho_theme', newTheme);
+            updateThemeIcon(newTheme);
+            showToast(newTheme === 'dark' ? 'Mode Gelap Diaktifkan' : 'Mode Terang Diaktifkan');
+        });
+
+        function updateThemeIcon(theme) {
+            themeIcon.className = theme === 'dark' ? 'fa-solid fa-sun' : 'fa-solid fa-moon';
+        }
+
+        // Pengontrol Musik (music.mp3 - Autoplay & Gesture Fix)
+        const bgMusic = document.getElementById('bgMusic');
+        const musicToggle = document.getElementById('musicToggle');
+        const musicIcon = musicToggle.querySelector('i');
+        let isMusicPlaying = false;
+
+        function playMusicOnGesture() {
+            if (isMusicPlaying) return;
+
+            bgMusic.play().then(() => {
+                isMusicPlaying = true;
+                musicToggle.classList.add('playing');
+                musicIcon.className = 'fa-solid fa-compact-disc fa-spin';
+                // Hapus event listener HANYA setelah musik berhasil berputar
+                document.removeEventListener('click', playMusicOnGesture);
+                document.removeEventListener('touchstart', playMusicOnGesture);
+                document.removeEventListener('pointerdown', playMusicOnGesture);
+            }).catch(err => {
+                console.log("Autoplay diblokir browser, menunggu klik pengguna...", err);
+            });
+        }
+
+        function toggleMusic() {
+            if (isMusicPlaying) {
+                bgMusic.pause();
+                isMusicPlaying = false;
+                musicToggle.classList.remove('playing');
+                musicIcon.className = 'fa-solid fa-music';
+                showToast('Musik Dihentikan');
+            } else {
+                bgMusic.play().then(() => {
+                    isMusicPlaying = true;
+                    musicToggle.classList.add('playing');
+                    musicIcon.className = 'fa-solid fa-compact-disc fa-spin';
+                    showToast('Memutar music.mp3 🎵');
+                }).catch(err => {
+                    showToast('Klik di mana saja pada halaman untuk memutar musik');
+                });
+            }
+        }
+
+        // Coba langsung putar saat halaman terbuka
+        playMusicOnGesture();
+        window.addEventListener('load', playMusicOnGesture);
+
+        // Pasang listener pada seluruh halaman (click & touch) sampai musik BENAR-BENAR berhasil berputar
+        document.addEventListener('click', playMusicOnGesture);
+        document.addEventListener('touchstart', playMusicOnGesture);
+        document.addEventListener('pointerdown', playMusicOnGesture);
+
+        musicToggle.addEventListener('click', (e) => {
+            e.stopPropagation();
+            toggleMusic();
+        });
+
+        // Fungsi Bagikan & Salin Link
+        const shareBtn = document.getElementById('shareBtn');
+        shareBtn.addEventListener('click', async () => {
+            const shareData = {
+                title: 'Yoganugroho - Profil & Links',
+                text: 'Kunjungi profil & channel WhatsApp resmi Yoganugroho',
+                url: window.location.href
+            };
+
+            if (navigator.share) {
+                try {
+                    await navigator.share(shareData);
+                } catch (err) {
+                    copyToClipboard(window.location.href);
+                }
+            } else {
+                copyToClipboard(window.location.href);
+            }
+        });
+
+        function copyToClipboard(text) {
+            navigator.clipboard.writeText(text).then(() => {
+                showToast('Link profil berhasil disalin!');
+            }).catch(() => {
+                showToast('Gagal menyalin link');
+            });
+        }
+
+        function showToast(msg) {
+            const toast = document.getElementById('toast');
+            const toastMsg = document.getElementById('toastMsg');
+            toastMsg.textContent = msg;
+            toast.classList.add('show');
+            setTimeout(() => {
+                toast.classList.remove('show');
+            }, 2400);
+        }
+    </script>
+</body>
+</html>
